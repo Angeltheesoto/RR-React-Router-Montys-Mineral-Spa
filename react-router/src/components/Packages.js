@@ -1,6 +1,7 @@
+import React from 'react'
 
-
-export default function Packages() {
+export default function Packages(props) {
+    const diasplayPackages = props.packages.map((eachPackage) => <li>{eachPackage}</li>)
 
     return (
         <div>
@@ -8,6 +9,9 @@ export default function Packages() {
                 <div className="packagesHeader">
                     <h1>Our Packages</h1>
                 </div>
+                <ul>
+                    {diasplayPackages}
+                </ul>
                 
             </div>
         </div>
